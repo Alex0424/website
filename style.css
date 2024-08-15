@@ -31,10 +31,16 @@ button {
     padding: 5px, 10px; /* Corrected padding values */
     cursor: pointer;
 }
+button:hover{
+    background-color: #D5ED9F;
+}
+button:hover.back{
+    background-color: red;
+}
 
-.linkedin{
+button.linkedin{
     color: blue;
 }
-.github{
+button.github{
     color: #393E46;
 }
