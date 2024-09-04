@@ -28,8 +28,25 @@
     <hr>
     
     <h2>Contact</h2>
-    <p>phone: +46723879264</p>
     <p>email: lindholmalex.la@gmail.com</p>
-    
+
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+    (function() {
+      var target = document.currentScript;
+      window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ24TQUzn7i_g-5X7LR7kTepqZXiTqWDyAx6poBZyDpYiAN-HzJzhIydJ_MHe60qc1VqiUxyhs2R?gv=true',
+          color: '#039BE5',
+          label: 'Book an appointment',
+          target,
+        });
+      });
+    })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
+
 </body>
 </html>
