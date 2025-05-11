@@ -1,28 +1,25 @@
 html {
-	background-color: #222831;
+	background-color: #010409;
 	font-family: "Anek Devanagari", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 450;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
-}
-div {
-	background-color: #393e46;
-	color: white;
+	color: #f0f6fc;
+	margin: 0; margin: 0;
+	padding: 0;
+	width: 100%;
 }
 h1 {
-	color: white;
 	font-weight: 450;
 }
 h2 {
-	color: white;
 	font-weight: 450;
-}
-p {
-	color: white;
 }
 
 .container {
+	border: 1px solid #262b31;
+	background-color: #0d1117;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 	gap: 16px;
@@ -37,14 +34,14 @@ a.back {
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	background-color: rgb(26, 18, 75);
-	border: 2px solid black;
+	background-color: #151b23;
+	border: 1px solid #3e444b;
 	border-radius: 8px;
 	padding: 8px;
 	color: #ffffff;
 	font-weight: bold;
 	text-decoration: none;
-	transition: all 0.2s ease-in-out;
+	transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 	max-width: 100vh;
 }
 
@@ -54,7 +51,7 @@ a.back {
 }
 
 a.main_button:hover {
-	background-color: #3225ac;
+	background-color: #1f2937;
 	transform: scale(1.03);
 	border-color: #4b5563; /* Slight hover border tone */
 }
