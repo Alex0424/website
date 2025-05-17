@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/article.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>Document</title>
 </head>
 <body>
   <script src="placeholder.js"></script>
   <div id="header-placeholder"></div>
 
-    <h1>Professional Experience</h1>
-  
-    <h2>Company: <a style="color: rgb(255, 102, 0)" href="https://dynamist.se/" target="_blank">Dynamist AB</a></h2>
-    <div>
-    <p><strong>Role:</strong> DevOps Engineer (Ongoing Internship / LIA)</p>
-    <p><strong>Duration:</strong> 6 months (currently in progress)</p>
-    <p>
-      Currently undertaking a six-month internship (LIA) focused on DevOps practices, creating CLI commands for applications, containerized application development, and unit testing. Actively contributing to both frontend and backend development—building user interfaces with HTML, CSS, and JavaScript, while also developing APIs and backend logic using FastAPI.
-    </p>
-  </div>
+  <div id="html-output"></div>
+  <div id="content">Loading...</div>
 
+  <script>
+    fetch('work_experience.md')
+      .then(response => response.text())
+      .then(markdown => {
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      })
+      .catch(error => {
+        document.getElementById('content').innerText = 'Failed to load Markdown file.';
+        console.error(error);
+      });
+  </script>
 </body>
 </html>

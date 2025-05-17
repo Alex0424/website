@@ -1,0 +1,52 @@
+body {
+	background-color: #0d1117;
+	font-family: "Anek Devanagari", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 450;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	color: #e6edf3;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#content {
+	font-family: Georgia, serif;
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	line-height: 1.7;
+	background-color: #0d1117;
+	color: #e6edf3;
+}
+
+h1,
+h2 {
+	font-weight: normal;
+	margin-top: 2rem;
+	color: #e6edf3;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+p,
+li {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+ul,
+ol {
+	padding-left: 1.5rem;
+}
+
+strong {
+	color: #e6edf3;
+}
