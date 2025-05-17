@@ -67,7 +67,7 @@ The application included a frontend, backend, API, containerization, real-time l
 
 **In addition to the Dynatron project, I also contributed to several smaller projects, such as:**
 
-- Developing CLI commands for Python programs.
+- Developed CLI commands for Python programs.
 - Designed and implemented new pages, as well as improved existing ones, for Dynamist’s official website.
 - Created a Python script using the Phabricator API to automate Kanban board management.
 
@@ -93,5 +93,6 @@ I believe the backend part of the project went very well for me. The frontend al
 
 Moving forward, I plan to apply my FastAPI knowledge when seeking future roles. It's a powerful backend framework in Python that enables fast and efficient application development.
 
-Conclusion
+## **Conclusion**
+
 This internship at Dynamist AB has been a major step in my development as a DevOps engineer. It has allowed me to apply my theoretical knowledge in real-world scenarios, learn best practices, and work with modern tools and technologies. I’m leaving this experience with more confidence, clearer direction, and a strong foundation for my future in the tech industry.
