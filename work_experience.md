@@ -1,10 +1,12 @@
-# Professional Experience
+# **Professional Experience**
 ---
-## Company: [Dynamist AB](https://dynamist.se/)
+## **Company**: [Dynamist AB](https://dynamist.se/)
 Role: DevOps Engineer (Ongoing Internship / LIA)  
 Duration: 6 months (currently in progress)
 
 <div style="page-break-after: always;"></div>
+
+# **Internship - Report**
 
 ## **Preface**
 
