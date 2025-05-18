@@ -10,7 +10,7 @@ Duration: 6 months (currently in progress)
 
 ## **Preface**
 
-I'm grateful to Henrik and Håkan for inviting me to join the internship at Dynamist AB. Many thanks as well to Kalle, Johan, Richard, Nella, Max, Daniel and everyone else who made the experience so welcoming.
+I'm grateful to Henrik and Håkan for inviting me to join the internship at Dynamist AB. Many thanks as well to Kalle, Johan, Richard and everyone else who made the experience so welcoming.
 
 <div style="page-break-after: always;"></div>
 
