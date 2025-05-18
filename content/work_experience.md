@@ -1,6 +1,9 @@
 # **Professional Experience**
+
 ---
+
 ## **Company**: [Dynamist AB](https://dynamist.se/)
+
 Role: DevOps Engineer (Ongoing Internship / LIA)  
 Duration: 6 months (currently in progress)
 
@@ -42,7 +45,7 @@ Henrik served as my mentor and provided support whenever needed. With over 20 ye
 
 ## **The Company's Work Environment Efforts**
 
-During my LIA, I experienced the work environment at the company as both safe and positive. There was an open and inclusive culture where you could ask questions and get help when needed. 
+During my LIA, I experienced the work environment at the company as both safe and positive. There was an open and inclusive culture where you could ask questions and get help when needed.
 
 The company actively works to maintain a good balance between work and health, both physical and mental. For example, it was clear that there was an understanding of the importance of taking breaks, clear communication, and setting realistic expectations for tasks. Meetings were held in a supportive tone, and there was space to discuss both technical issues and workload.
 One nice benefit is that the company offers on-site massage, which contributes to employee well-being and stress relief.

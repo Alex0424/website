@@ -1,63 +1,66 @@
 body {
-	background-color: #010409;
-	font-family: "Anek Devanagari", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 450;
-	font-style: normal;
-	font-variation-settings: "wdth" 100;
-	color: #f0f6fc;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+  background-color: #010409;
+  font-family: "Anek Devanagari", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #f0f6fc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 h1 {
-	font-weight: 450;
+  font-weight: 450;
 }
 h2 {
-	font-weight: 450;
+  font-weight: 450;
 }
 
 .container {
-	border: 1px solid #262b31;
-	background-color: #0d1117;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-	gap: 16px;
-	padding: 20px;
-	margin: 0, auto;
+  border: 1px solid #262b31;
+  background-color: #0d1117;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  margin: 0, auto;
 }
 
 a.main_button,
 a.back {
-	display: flex;
-	height: 80px;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
-	background-color: #151b23;
-	border: 1px solid #3e444b;
-	border-radius: 8px;
-	padding: 8px;
-	color: #ffffff;
-	font-weight: bold;
-	text-decoration: none;
-	transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-	max-width: 100vh;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #151b23;
+  border: 1px solid #3e444b;
+  border-radius: 8px;
+  padding: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  max-width: 100vh;
 }
 
 a.back {
-	margin-left: 1rem;
-	max-width: 140px;
+  margin-left: 1rem;
+  max-width: 140px;
 }
 
 a.main_button:hover {
-	background-color: #1f2937;
-	transform: scale(1.03);
-	border-color: #4b5563; /* Slight hover border tone */
+  background-color: #1f2937;
+  transform: scale(1.03);
+  border-color: #4b5563; /* Slight hover border tone */
 }
 
 a.back:hover {
-	background-color: red;
-	transform: scale(1.03);
-	border-color: #4b5563;
+  background-color: red;
+  transform: scale(1.03);
+  border-color: #4b5563;
 }
