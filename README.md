@@ -1,7 +1,5 @@
 # Source code for [my website](https://alexanderlindholm.net)
 
-Nothing to see here
-
 ## 🧪 Linting the Code
 
 To lint the codebase using Biome, run:

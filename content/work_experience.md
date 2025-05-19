@@ -23,7 +23,7 @@ Dynamist is an IT service company delivering efficient solutions focused on secu
 
 Employees at Dynamist AB work on patching security standards, managing Kubernetes servers, developing applications, and working with cloud technologies, among other tasks.
 
-The company's clients include: GREEN FENCE, EverSec, Sylog Systems, SAVR, Trustly, Sence, Braathens, Sthlm Fast, MSC Solutions, Highlander, PRICER, FUJITSU, and Holm Security.
+The company's clients include: Swedbank, Handelsbanken, FENCE, EverSec, Sylog Systems, SAVR, Trustly, Sence, Braathens, Sthlm Fast, MSC Solutions, Highlander, PRICER, FUJITSU, and Holm Security.
 
 Between July 2020 and July 2024, Dynamist achieved a 67% growth in turnover.
 
