@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/article.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="/assets/js/placeholder.js"></script>
+    <div id="header-placeholder"></div>
+    <div id="content">
+      <h1>Frontend</h1>
+      <p>
+        Frontend refers to the part of a website or application that users
+        directly interact with. It includes everything users see and click, such
+        as the layout, colors, buttons, forms, text, and images. Frontend
+        development typically involves using HTML, CSS, and JavaScript, along
+        with frameworks and libraries like React, Angular, or Vue.js.
+      </p>
+
+      <h2>Importance in IT Development:</h2>
+      <p>
+        Frontend is crucial because it provides the first impression of your
+        website or application to users. Good frontend design ensures usability,
+        accessibility, and responsiveness, enhancing user experience. An
+        intuitive, visually appealing frontend can significantly impact user
+        retention and satisfaction.
+      </p>
+
+      <h2>Connecting Frontend to Backend:</h2>
+      <p>
+        The frontend communicates with the backend (server-side) through APIs
+        (Application Programming Interfaces), typically using HTTP requests
+        (GET, POST, PUT, DELETE). This interaction allows the frontend to fetch,
+        display, and update data managed by backend servers and databases.
+        Together, frontend and backend form a complete system: the frontend
+        presenting information clearly and interactively, and the backend
+        handling the logic, storage, and business rules behind the scenes.
+      </p>
+      <h2>HTML</h2>
+      <h3>HTML Boilerplate</h3>
+      <p>
+        HTML boilerplate refers to a basic template or starting point for
+        creating an HTML document. It includes the essential structure and
+        elements required for a valid and functional HTML page.
+      </p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;HTML 5 Boilerplate&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;link rel="stylesheet" href="/style.css"&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;script src="/index.js"&gt;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+</code></pre>
+      <h4>
+        What is a <code class="language-html">&lt;!DOCTYPE html&gt;</code>?
+      </h4>
+      <p>
+        The <code>&lt;!DOCTYPE html&gt;</code> declaration defines the document
+        type and version of HTML being used. It ensures the browser renders the
+        page in standards mode.
+      </p>
+
+      <h4>
+        What is a <code class="language-html">&lt;html lang="en"&gt;</code>?
+      </h4>
+      <p>
+        The <code>&lt;html&gt;</code> tag is the root element of an HTML
+        document. The <code>lang="en"</code> attribute specifies the language of
+        the document as English, which helps with accessibility and SEO.
+      </p>
+
+      <h4>What is a <code class="language-html">&lt;head&gt;</code>?</h4>
+      <p>
+        The <code>&lt;head&gt;</code> section contains metadata about the
+        document, such as its title, character encoding, and links to
+        stylesheets or scripts. This information is not displayed on the page.
+      </p>
+
+      <h4>What is a <code class="language-html">&lt;meta&gt;</code>?</h4>
+      <p>
+        The <code>&lt;meta&gt;</code> tag provides metadata about the HTML
+        document, such as character encoding, viewport settings, and
+        compatibility information.
+      </p>
+
+      <h4>
+        What is a
+        <code class="language-html">&lt;meta charset="UTF-8"&gt;</code>?
+      </h4>
+      <p>
+        The <code>&lt;meta charset="UTF-8"&gt;</code> tag specifies the
+        character encoding for the document, ensuring it supports a wide range
+        of characters, including special symbols.
+      </p>
+
+      <h4>
+        What is a
+        <code class="language-html"
+          >&lt;meta name="viewport" content="width=device-width,
+          initial-scale=1.0" /&gt;</code
+        >?
+      </h4>
+      <p>
+        The <code>&lt;meta name="viewport"&gt;</code> tag controls the page's
+        dimensions and scaling on different devices, making it responsive for
+        mobile and desktop screens.
+      </p>
+
+      <h4>
+        What is a
+        <code class="language-html"
+          >&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;</code
+        >?
+      </h4>
+      <p>
+        This <code>&lt;meta&gt;</code> tag ensures compatibility with Internet
+        Explorer by forcing it to use the latest rendering engine.
+      </p>
+
+      <h4>What is a <code class="language-html">&lt;title&gt;</code>?</h4>
+      <p>
+        The <code>&lt;title&gt;</code> tag defines the title of the document,
+        which appears in the browser tab and is important for SEO.
+      </p>
+
+      <h4>What is a <code class="language-html">&lt;link&gt;</code>?</h4>
+      <p>
+        The <code>&lt;link&gt;</code> tag is used to link external resources,
+        such as stylesheets, to the HTML document.
+      </p>
+
+      <h4>What is a <code class="language-html">&lt;script&gt;</code>?</h4>
+      <p>
+        The <code>&lt;script&gt;</code> tag is used to include JavaScript files
+        or inline scripts that add interactivity and functionality to the page.
+      </p>
+
+      <h2>Nesting and Indentation</h2>
+      <p>
+        Nesting and indentation are essential practices in HTML to ensure the
+        code is structured, readable, and easy to maintain. Proper nesting means
+        placing elements inside their parent elements in a logical hierarchy.
+      </p>
+
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <p>In this example:</p>
+      <ul>
+        <li>
+          The <code class="language-html">&lt;html&gt;</code> element is the
+          root, and all other elements are nested inside it.
+        </li>
+        <li>
+          The <code class="language-html">&lt;head&gt;</code> and
+          <code class="language-html">&lt;body&gt;</code> elements are direct
+          children of <code class="language-html">&lt;html&gt;</code>.
+        </li>
+        <li>
+          The <code class="language-html">&lt;div&gt;</code> is a child of
+          <code class="language-html">&lt;body&gt;</code>, and the
+          <code class="language-html">&lt;p&gt;</code> is a child of
+          <code class="language-html">&lt;div&gt;</code>.
+        </li>
+      </ul>
+
+      <p>
+        Proper indentation (e.g., 2 or 4 spaces) makes it easier to see the
+        relationships between elements, improving readability and debugging.
+      </p>
+
+      <h2>CSS</h2>
+      <h3>What is CSS?</h3>
+      <p>
+        CSS (Cascading Style Sheets) is a stylesheet language used to define how
+        HTML elements are visually displayed. CSS separates content (HTML) from
+        its presentation, simplifying design management.
+      </p>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="style.css"&gt;
+</code></pre>
+
+      <h3>CSS Properties</h3>
+      <p>
+        CSS properties control the appearance of HTML elements. Examples include
+        color, font-size, margin, padding, and background.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+    p {
+        color: red;
+        font-size: 14px;
+        margin: 10px;
+        background-color: #eee;
+    }
+&lt;/style&gt;
+</code></pre>
+
+      <h3>Intermediate CSS</h3>
+      <p>
+        Intermediate CSS covers class and ID selectors, pseudo-classes, and
+        combinators for targeted styling.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+    /* Class Selector */
+    .highlight {
+        color: blue;
+    }
+
+    /* ID Selector */
+    #header {
+        background-color: yellow;
+    }
+
+    /* Pseudo-class Selector */
+    a:hover {
+        color: green;
+    }
+&lt;/style&gt;
+        
+&lt;div id="header"&gt;ID Selector Example&lt;/div&gt;
+&lt;p class="highlight"&gt;Class Selector Example&lt;/p&gt;
+&lt;a href="#"&gt;Hover over me&lt;/a&gt;
+</code></pre>
+
+      <h3>Advanced CSS</h3>
+      <p>
+        Advanced CSS includes features such as transitions, animations,
+        variables, and media queries for responsive design.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+    :root {
+        --main-color: purple;
+    }
+
+    .animated {
+        background-color: var(--main-color);
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .animated:hover {
+        background-color: pink;
+    }
+
+    @media (max-width: 600px) {
+        .animated {
+            background-color: yellow;
+        }
+    }
+&lt;/style&gt;
+
+&lt;div class="animated"&gt;Hover over me!&lt;/div&gt;
+</code></pre>
+
+      <h3>Flexbox</h3>
+      <p>
+        Flexbox (Flexible Box Layout) is a CSS layout module used to design
+        responsive layouts more effectively.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        margin: 5px;
+    }
+&lt;/style&gt;
+
+&lt;div class="flex-container"&gt;
+    &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h3>Grid</h3>
+      <p>
+        CSS Grid is a powerful layout system for creating two-dimensional
+        layouts with rows and columns.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .grid-item {
+        background-color: teal;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+&lt;/style&gt;
+
+&lt;div class="grid-container"&gt;
+    &lt;div class="grid-item"&gt;Grid Item 1&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Grid Item 2&lt;/div&gt;
+    &lt;div class="grid-item"&gt;Grid Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h3>Bootstrap</h3>
+      <p>
+        Bootstrap is an open-source CSS framework used to create responsive,
+        mobile-first websites. It includes ready-to-use components, a 12-column
+        grid system, utility classes, and responsive design features.
+      </p>
+
+      <p>Include Bootstrap via CDN:</p>
+      <pre><code class="language-html">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+</code></pre>
+
+      <p>Basic layout using container, row, and columns:</p>
+      <pre><code class="language-html">&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;Column 1&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Column 2&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Column 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <p>Example using cards:</p>
+      <pre><code class="language-html">&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card 1&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some example content.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-md-4"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card 2&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some example content.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-md-4"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card 3&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some example content.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <p>
+        Bootstrap helps streamline design, promotes responsive practices, and
+        reduces the amount of custom CSS you need to write.
+      </p>
+
+      <h3>JavaScript</h3>
+      <p>
+        JavaScript is a programming language used to add interactivity and
+        dynamic behavior to websites. It runs in the browser and allows
+        developers to respond to user actions, manipulate HTML elements, and
+        communicate with backend services.
+      </p>
+
+      <p>Including JavaScript in an HTML document:</p>
+      <pre><code class="language-html">&lt;script src="script.js"&gt;&lt;/script&gt;
+</code></pre>
+
+      <p>Writing JavaScript directly in the HTML file:</p>
+      <pre><code class="language-html">&lt;script&gt;
+  console.log("Hello from JavaScript");
+&lt;/script&gt;
+</code></pre>
+
+      <p>Changing text content of an element with JavaScript:</p>
+      <pre><code class="language-html">&lt;div id="message"&gt;Original Text&lt;/div&gt;
+
+&lt;script&gt;
+  document.getElementById("message").textContent = "Updated Text";
+&lt;/script&gt;
+</code></pre>
+
+      <p>Handling a button click event:</p>
+      <pre><code class="language-html">&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+&lt;div id="output"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  function showMessage() {
+    document.getElementById("output").textContent = "Button clicked!";
+  }
+&lt;/script&gt;
+</code></pre>
+
+      <p>
+        JavaScript can fetch data from a backend using the
+        <code>fetch()</code> function.
+      </p>
+      <pre><code class="language-html">&lt;script&gt;
+  fetch("https://api.example.com/data")
+    .then(response =&gt; response.json())
+    .then(data =&gt; console.log(data));
+&lt;/script&gt;
+</code></pre>
+      <p>
+        JavaScript is essential for modern web development. It powers features
+        like form validation, dropdowns, sliders, AJAX requests, and much more.
+      </p>
+    </div>
+    <script src="/assets/js/footer_placeholder.js"></script>
+    <footer id="footer-placeholder"></footer>
+  </body>
+</html>

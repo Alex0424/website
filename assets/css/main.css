@@ -9,10 +9,18 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  display: flex; /*footer force bottom*/
+  flex-direction: column; /*footer force bottom*/
 }
+
+footer {
+  margin-top: auto;
+}
+
 h1 {
   font-weight: 450;
 }
+
 h2 {
   font-weight: 450;
 }
@@ -57,6 +65,7 @@ a.main_button:hover {
   background-color: #1f2937;
   transform: scale(1.03);
   border-color: #4b5563; /* Slight hover border tone */
+  box-shadow: 0 0 15px #1379ff;
 }
 
 a.back:hover {

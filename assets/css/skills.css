@@ -11,6 +11,10 @@ h1 {
   margin: 20px 0;
   font-size: 2em;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .skills-grid {
   display: grid;

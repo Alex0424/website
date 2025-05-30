@@ -50,3 +50,6 @@ ol {
 strong {
   color: #e6edf3;
 }
+pre {
+  border-radius: 5px;
+}

@@ -5,7 +5,5 @@
 To lint the codebase using Biome, run:
 
 ```bash
-npx biome check .
-npx biome check . --fix # To automatically fix fixable issues
 npx prettier --write .
 ```
