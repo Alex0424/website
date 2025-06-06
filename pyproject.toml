@@ -1,0 +1,28 @@
+[project]
+name = "grafs_generator"
+version = "0.1.0"
+description = "Generating grafs for my webpage with python."
+authors = [
+    { name = "Alexander Lindholm", email = "lindholmalexander.la@gmail.com" }
+]
+license = "MIT"
+readme = "README.md"
+
+[project.optional-dependencies]
+grafs = [
+    'pandas',
+    'plotly',
+]
+
+linting = [
+    "flake8",
+    "mypy",
+    "isort",
+    "pre-commit",
+]
+
+dev = [
+    "pytest",
+    "black",
+    "isort",
+]
