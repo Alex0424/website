@@ -23,6 +23,8 @@ fig.update_layout(
 )
 
 base_dir = Path(__file__).resolve().parent.parent  # Root DIR
-output_path = base_dir / "assets/images/spider_chart.png"
 
+output_path = base_dir / "assets/images/spider_chart.png"
 fig.write_image(output_path)
+output_path = base_dir / "pages/spider_chart.html"
+fig.write_html(output_path)
