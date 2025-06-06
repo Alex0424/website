@@ -74,3 +74,21 @@ Push the tag
 ```
 git push origin v0.1.2
 ```
+
+Delete tag from local repository
+
+```
+git tag -d v0.1.2
+```
+
+Delete the tag remotely
+
+```
+git push origin --delete v0.1.2
+```
+
+Check git tags
+
+```
+git tag
+```
