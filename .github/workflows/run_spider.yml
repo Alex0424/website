@@ -26,13 +26,15 @@ jobs:
       - name: Run Spider Skills Script
         run: python src/spider_skills.py
 
-      - name: Configure Git
+      - name: Commit files
         run: |
-          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-
-      - name: Commit and Push Changes
-        run: |
           git add assets/images/spider_chart.png
           git commit -m "Update spider chart via GitHub Actions"
-          git push origin main
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  # ${{ github.ref }}
