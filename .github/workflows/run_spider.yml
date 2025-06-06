@@ -28,12 +28,10 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "GitHub Actions"
+          git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "actions@github.com"
 
       - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add assets/images/spider_chart.png
           git commit -m "Update spider chart via GitHub Actions"
