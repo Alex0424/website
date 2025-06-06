@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas plotly
+          pip install pandas plotly kaleido
 
       - name: Run Spider Skills Script
         run: python src/spider_skills.py

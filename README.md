@@ -54,3 +54,9 @@ Running pre-commit install ensures that the hooks are actually installed into yo
 ```
 pre-commit install
 ```
+
+## Git Tag
+
+```
+git tag -a v0.1.1 -m "Version 0.1.1"
+```
