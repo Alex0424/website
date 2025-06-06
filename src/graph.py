@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Skill data (replace with your real values)
 skills_data = {
-    "Programming": {"Python": 10, "BASH": 7},
+    "Programming": {"Python": 8, "BASH": 7},
     "Version Control": {"Git": 8},
     "Automation": {"CI/CD": 9, "Terraform": 8, "Ansible": 10},
     "Frontend": {"HTML/CSS": 10, "JavaScript": 6},

@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 df = pd.DataFrame(dict(
-    r=[9, 8, 7, 6, 10, 9, 2],
+    r=[10, 8, 7, 6, 8, 9, 2],
     theta=[
         'Linux',
         'Cloud',
