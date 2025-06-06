@@ -1,3 +1,6 @@
 .venv
 *.egg-info/
 /build
+graph_chart.html
+spider_chart.html
+spider_chart.png

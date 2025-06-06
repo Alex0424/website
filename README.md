@@ -57,6 +57,20 @@ pre-commit install
 
 ## Git Tag
 
+Pull the latest changes
+
+```
+git pull origin main
+```
+
+Create a new tag pointing to the latest commit
+
 ```
 git tag -a v0.1.1 -m "Version 0.1.1"
+```
+
+Push the tag
+
+```
+git push origin v0.1.2
 ```
