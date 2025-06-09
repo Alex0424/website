@@ -4,7 +4,7 @@
 
 To lint the codebase using Biome, run:
 
-```bash
+```
 npx prettier --write .
 ```
 
@@ -12,7 +12,7 @@ npx prettier --write .
 
 [Activate VENV](https://docs.astral.sh/uv/pip/environments/)
 
-```
+```bash
 uv venv
 source .venv/bin/activate
 ```

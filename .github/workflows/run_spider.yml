@@ -36,7 +36,7 @@ jobs:
           git add assets/images/spider_chart.png \
           pages/spider_chart.html \
           pages/graph_chart.html
-          
+
           git commit -m "Update spider chart via GitHub Actions"
 
       - name: Push changes
