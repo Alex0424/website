@@ -5,7 +5,7 @@
 ## **Company**: [Dynamist AB](https://dynamist.se/)
 
 Role: DevOps Engineer (Ongoing Internship / LIA)  
-Duration: 6 months (currently in progress)
+Duration: 9 months (currently in progress)
 
 <div style="page-break-after: always;"></div>
 
@@ -58,7 +58,7 @@ My expectations for the LIA were met in a meaningful way. I received clear tasks
 
 **Dynatron Project - Technical Implementation**
 
-The application included a frontend, backend, API, containerization, real-time logging, and secure configuration handling.
+The application included a frontend, backend, API, containerization, real-time logging, Kubernetes deployment, and secure configuration handling.
 
 - Frontend: Built from scratch using HTML, CSS, and JavaScript. Users can access the site and upload a file by dragging it into the designated upload area.
 
@@ -69,6 +69,8 @@ The application included a frontend, backend, API, containerization, real-time l
 - Logging: I set up real-time monitoring for FastAPI, allowing me to detect errors as they occurred and quickly resolve them.
 
 - Environment Variables: Sensitive information, such as API tokens, was stored in environment variables to keep the application secure and configurable across different environments.
+
+- Kubernetes Deployment: I deployed the application to a Kubernetes cluster, ensuring it ran in a scalable, resilient environment. This included writing configuration files, managing secrets securely, and using Kubernetes best practices for deployment and service exposure.
 
 **In addition to the Dynatron project, I also contributed to several smaller projects, such as:**
 
