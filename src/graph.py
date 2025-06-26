@@ -40,16 +40,35 @@ fig = px.bar(
     color="Category",
     barmode="group",
     title="Grouped Bar Chart of Technical Skills",
-    category_orders={"Skill": df["Skill"].tolist()}
+    category_orders={"Skill": df["Skill"].tolist()},
+    color_discrete_sequence=px.colors.qualitative.Dark24
 )
 
 fig.update_layout(
+    title="Grouped Bar Chart of Technical Skills",
     xaxis_tickangle=-45,
-    yaxis=dict(range=[0, 10]),
-    xaxis_title=None,
-    yaxis_title="Skill Level (1–10)",
-    bargap=0.3
+    yaxis=dict(
+        range=[0, 10],
+        title="Skill Level (1–10)",
+        gridcolor='gray',
+        color='white'
+    ),
+    xaxis=dict(
+        title=None,
+        tickfont_color='white',
+        gridcolor='gray',
+        color='white'
+    ),
+    plot_bgcolor='#1e1e1e',
+    paper_bgcolor='black',
+    font=dict(color='white'),
+    bargap=0.15,          # Smaller gap between groups
+    bargroupgap=0.15,     # Smaller gap within groups
+    legend=dict(
+        font=dict(color='white')
+    )
 )
+
 
 base_dir = Path(__file__).resolve().parent.parent  # Root DIR
 output_path = base_dir / "pages/graph_chart.html"
