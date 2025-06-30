@@ -1,5 +1,5 @@
 body {
-  background-color: #010409;
+  background-color: #000;
   font-family: "Anek Devanagari", sans-serif;
   font-optical-sizing: auto;
   font-weight: 450;
@@ -18,17 +18,17 @@ footer {
 }
 
 h1 {
-  font-weight: 450;
+  font-weight: 555;
+  text-align: center;
 }
 
 h2 {
-  font-weight: 450;
-  text-align: center; /* Add this line */
+  font-size: 2em;
+  font-weight: 555;
+  text-align: center;
 }
 
 .container {
-  border: 1px solid #262b31;
-  background-color: #0d1117;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
@@ -54,7 +54,7 @@ a.back {
     background-color 0.3s ease,
     transform 0.3s ease,
     border-color 0.3s ease;
-  max-width: 100vh;
+  max-width: 210vh;
 }
 
 a.back {
@@ -64,7 +64,7 @@ a.back {
 
 a.main_button:hover {
   background-color: #1f2937;
-  transform: scale(1.03);
+  transform: scale(1.01);
   border-color: #4b5563; /* Slight hover border tone */
   box-shadow: 0 0 15px #1379ff;
 }
@@ -73,4 +73,45 @@ a.back:hover {
   background-color: red;
   transform: scale(1.03);
   border-color: #4b5563;
+}
+
+.responsive-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto; /* Added auto for horizontal centering */
+  width: 90%; /* Changed from 100% to give some margin */
+  max-width: 1200px; /* Set a maximum width for very large screens */
+}
+
+.responsive-image {
+  width: 100%; /* Changed from max-width to width for full container width */
+  height: auto;
+  border-radius: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 450;
+  font-size: 1.5em;
+  color: #a8b3cf; /* Slightly muted color compared to main text */
+  margin-top: -10px; /* Pulls it closer to the h1 */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px; /* Slight letter spacing for elegance */
+}
+
+.skills-section {
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+/* For mobile devices */
+@media (width <= 768px) {
+  .responsive-image-container {
+    width: 95%;
+  }
+
+  .subtitle {
+    font-size: 1.3em;
+    margin-top: -5px;
+  }
 }

@@ -15,15 +15,15 @@ df = pd.DataFrame(dict(
 ))
 
 fig = px.line_polar(df, r='r', theta='theta', line_close=True)
-fig.update_traces(fill='toself', line_color='cyan')  # Line color
+fig.update_traces(fill='toself', line_color='#1379ff')
 
 # Apply dark theme layout
 fig.update_layout(
-    plot_bgcolor='black',
-    paper_bgcolor='black',
+    plot_bgcolor='rgba(0,0,0,0)',  # Transparent
+    paper_bgcolor='rgba(0,0,0,0)',
     font_color='white',
     polar=dict(
-        bgcolor='black',
+        bgcolor='rgba(0,0,0,0)',
         radialaxis=dict(
             showline=True,
             linewidth=1,
@@ -43,7 +43,7 @@ base_dir = Path(__file__).resolve().parent.parent  # Root DIR
 
 # Save PNG
 output_path = base_dir / "assets/images/spider_chart.png"
-fig.write_image(output_path)
+fig.write_image(output_path, format="png", scale=2)
 
 # Save HTML
 output_path = base_dir / "pages/spider_chart.html"

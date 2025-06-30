@@ -1,4 +1,8 @@
-# This is the Source Code for [my Website](https://alexanderlindholm.net)
+# This is the Source Code for [my Portfolio Website](https://alexanderlindholm.net)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Frontend Development Setup
 
