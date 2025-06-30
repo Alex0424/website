@@ -17,7 +17,6 @@
 - Closely tracks RHEL — ideal if you're managing Red Hat-based infrastructure.
 
 - 🛠️ Enterprise-ready. Common in on-premises servers and regulated environments.
-
   - Long support cycles (e.g., CentOS 7 had ~10 years of support).
 
   - Conservative, stable updates (no surprises in production).
@@ -35,7 +34,6 @@
 - ⚡ Ultra-lightweight
 
 - Perfect for containers and microservices.
-
   - Alpine base image is only ~5 MB, compared to Debian slim (~29 MB ) or Ubuntu (60+ MB).
 
   - Fewer layers and services = quicker container startup time and fewer vulnerabilities.

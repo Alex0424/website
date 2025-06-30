@@ -1,11 +1,37 @@
 # This is the Source Code for [my Website](https://alexanderlindholm.net)
 
-## 🧪 Linting the Code
+## Frontend Development Setup
 
-To lint the codebase using Biome, run:
+Install all frontend tools with a single command:
 
+```bash
+npm install
 ```
-npx prettier --write .
+
+This will install all dependencies defined in package.json, including:
+
+- ESLint - For JavaScript linting
+- Prettier - For code formatting
+- Stylelint - For CSS linting
+- HTMLHint - For HTML validation
+
+### 🧪 Running Linters
+
+```bash
+# Format code with Prettier
+npm run format
+
+# Lint JavaScript
+npm run lint:js
+
+# Lint CSS
+npm run lint:css
+
+# Lint HTML
+npm run lint:html
+
+# Run all linters
+npm run lint
 ```
 
 ## Activate VENV
@@ -27,7 +53,7 @@ uv pip install .[grafs]
 python <name>.py
 ```
 
-## Linting
+## Linting Python Code
 
 ```
 uv pip install .[linting]

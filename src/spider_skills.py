@@ -3,20 +3,19 @@ import pandas as pd
 from pathlib import Path
 
 df = pd.DataFrame(dict(
-    r=[10, 8, 7, 6, 8, 9, 2],
+    r=[10, 8, 7, 6, 8, 9],
     theta=[
         'Linux',
         'Cloud',
         'Network',
         'Security',
         'Programming',
-        'CI/CD',
-        'Windows',
+        'Automation',
     ]
 ))
 
 fig = px.line_polar(df, r='r', theta='theta', line_close=True)
-fig.update_traces(fill='toself', line_color='cyan')  # Customize line color if desired
+fig.update_traces(fill='toself', line_color='cyan')  # Line color
 
 # Apply dark theme layout
 fig.update_layout(

@@ -11,6 +11,7 @@ h1 {
   margin: 20px 0;
   font-size: 2em;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -18,10 +19,12 @@ a {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, 250px); /* Fixed width columns */
+  gap: 60px; /* Your existing gap */
   padding: 20px;
-  justify-items: center;
+  justify-content: center; /* Center the grid when there's extra space */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skill-card {
@@ -31,6 +34,7 @@ a {
   padding: 20px;
   text-align: center;
   width: 250px;
+  box-sizing: border-box; /* Add this line */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -38,7 +42,7 @@ a {
 
 .skill-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgb(0 0 0 / 50%);
 }
 
 .skill-icon {
@@ -57,4 +61,29 @@ a {
   margin: 0;
   font-size: 1em;
   color: #9ca3af;
+}
+
+/* media query for small screens */
+@media (width <= 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 30px; /* Reduced gap */
+  }
+
+  .skill-card {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the card if it's smaller than its container */
+  }
+}
+
+@media (width >= 481px) and (width <= 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 40px;
+    justify-items: center; /* Center items horizontally in their grid areas */
+  }
+
+  .skill-card {
+    margin: 0 auto; /* Center the card if it's smaller than its container */
+  }
 }

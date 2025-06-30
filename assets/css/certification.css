@@ -14,51 +14,121 @@ h1 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Ensures only one box per line */
-  grid-auto-rows: 1fr;
-  gap: 40px;
-  padding: 20px;
-  justify-items: center; /* Centers the boxes horizontally */
+  grid-template-columns: 1fr; /* One box per line */
+  gap: 50px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .skill-card {
   background-color: #151b23;
   border: 1px solid #3e444b;
   border-radius: 8px;
-  padding: 40px;
+  padding: 30px;
   text-align: center;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 60%;
-  margin: 0 auto;
-  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02); /* Slightly reduced scale for better UX */
+  box-shadow: 0 4px 15px rgb(0 0 0 / 50%);
 }
 
 .skill-icon {
-  width: 100%;
-  margin-bottom: 30px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .skill-card h3 {
-  margin: 20px 0;
-  font-size: 2em;
+  margin: 15px 0;
+  font-size: 1.8em;
 }
 
 .skill-card p,
 a {
-  font-size: 2em;
   text-decoration: none;
-  margin: 0;
+  margin: 10px 0;
   font-size: 1em;
   color: #9ca3af;
+}
+
+/* Professional date styling */
+.cert-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: rgb(45 52 64 / 60%);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #b7bdc7;
+  width: fit-content;
+  align-self: center;
+}
+
+.date-icon {
+  margin-right: 6px;
+  opacity: 0.8;
+}
+
+/* Alternative without emoji (using ::before) */
+.cert-date-alt {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  background-color: rgb(45 52 64 / 60%);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #b7bdc7;
+}
+
+.cert-date-alt::before {
+  content: "• ";
+  color: #58a6ff;
+}
+
+/* Media queries */
+@media (width >= 769px) {
+  .skill-card {
+    width: 70%;
+  }
+}
+
+@media (width <= 768px) {
+  .skill-card {
+    width: 85%;
+  }
+}
+
+@media (width <= 480px) {
+  .skills-grid {
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .skill-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.5em;
+  }
+}
+
+/* Anchor styling */
+.skill-card-link {
+  display: contents; /* Make the link wrapper invisible in grid layout */
+  color: inherit;
 }

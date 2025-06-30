@@ -9,8 +9,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  display: flex; /*footer force bottom*/
-  flex-direction: column; /*footer force bottom*/
+  display: flex; /* footer force bottom */
+  flex-direction: column; /* footer force bottom */
 }
 
 footer {
@@ -23,6 +23,7 @@ h1 {
 
 h2 {
   font-weight: 450;
+  text-align: center; /* Add this line */
 }
 
 .container {
@@ -32,7 +33,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
   padding: 20px;
-  margin: 0, auto;
+  margin: 0;
 }
 
 a.main_button,
@@ -46,7 +47,7 @@ a.back {
   border: 1px solid #3e444b;
   border-radius: 8px;
   padding: 8px;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   transition:

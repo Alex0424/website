@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("/pages/header.html")
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/pages/header.html')
     .then((response) => response.text())
     .then((data) => {
-      document.getElementById("header-placeholder").innerHTML = data;
+      document.getElementById('header-placeholder').innerHTML = data;
     })
-    .catch((error) => console.error("Error loading header:", error));
+    .catch((error) => console.error('Error loading header:', error));
 });

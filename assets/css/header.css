@@ -10,6 +10,18 @@
   font-family: "Anek Devanagari", sans-serif;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
 .navbar .logo a {
   text-decoration: none;
   color: white;
@@ -27,18 +39,6 @@
 
 .nav-links li {
   display: inline;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  transition:
-    background-color 0.3s,
-    border-color 0.3s;
 }
 
 .nav-links a:hover {
