@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon_animation.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon_fallback.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/article.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
@@ -14,7 +18,21 @@
   </head>
   <body>
     <script src="/assets/js/placeholder.js"></script>
-    <div id="header-placeholder"></div>
+    <nav>
+        <div class="logo">Alexander</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/skills.html">Skills</a></li>
+            <li><a href="/pages/certification.html">Certifications</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
+            <li><a href="/pages/experience.html">Experience</a></li>
+        </ul>
+    </nav>
     <div id="content">
       <h1>Frontend</h1>
       <p>
