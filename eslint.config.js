@@ -15,13 +15,13 @@ export default [
         console: 'readonly',
         alert: 'readonly',
         // Add other browser globals as needed
-      }
+      },
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-undef': 'error',
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single']
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
     },
   },
 ];

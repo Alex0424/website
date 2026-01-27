@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Alexander Lindholm - DevOps Engineer Portfolio">
-    <meta property="og:image" content="/assets/images/spider_chart.png">
+    <meta
+      name="description"
+      content="Alexander Lindholm - DevOps Engineer Portfolio"
+    />
+    <meta property="og:image" content="/assets/images/spider_chart.png" />
 
     <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="stylesheet" href="/assets/css/article.css" />
@@ -15,10 +18,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>Alexander Lindholm</title>
-    
-    <link rel="icon" href="/favicon_animation.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon_fallback.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/header.css">
+
+    <link rel="icon" href="/favicon_animation.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon_fallback.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,33 +32,33 @@
   </head>
   <body>
     <nav>
-        <div class="logo">Alexander</div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="menu" id="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/pages/skills.html">Skills</a></li>
-            <li><a href="/pages/certification.html">Certifications</a></li>
-            <li><a href="/pages/projects.html">Projects</a></li>
-            <li><a href="/pages/experience.html">Experience</a></li>
-        </ul>
+      <div class="logo">Alexander</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/skills.html">Skills</a></li>
+        <li><a href="/pages/certification.html">Certifications</a></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><a href="/pages/experience.html">Experience</a></li>
+      </ul>
     </nav>
 
     <div id="html-output"></div>
     <div id="content">Loading...</div>
 
     <script>
-      fetch("/content/work_experience.md")
+      fetch('/content/work_experience.md')
         .then((response) => response.text())
         .then((markdown) => {
-          document.getElementById("content").innerHTML = marked.parse(markdown);
+          document.getElementById('content').innerHTML = marked.parse(markdown);
         })
         .catch((error) => {
-          document.getElementById("content").innerText =
-            "Failed to load Markdown file.";
+          document.getElementById('content').innerText =
+            'Failed to load Markdown file.';
           console.error(error);
         });
     </script>

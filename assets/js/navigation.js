@@ -4,7 +4,7 @@ const menu = document.getElementById('menu');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   menu.classList.toggle('active');
-  
+
   // Toggle body scroll prevention
   if (menu.classList.contains('active')) {
     document.body.style.overflow = 'hidden';
@@ -31,4 +31,3 @@ document.addEventListener('click', (e) => {
     document.body.style.overflow = '';
   }
 });
-

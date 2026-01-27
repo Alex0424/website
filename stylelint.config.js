@@ -7,12 +7,9 @@ export default {
     'font-family-no-missing-generic-family-keyword': [
       true,
       {
-        ignoreFontFamilies: ['Anek Devanagari']
-      }
-    ]
+        ignoreFontFamilies: ['Anek Devanagari'],
+      },
+    ],
   },
-  ignoreFiles: [
-    'node_modules/**/*',
-    'dist/**/*'
-  ]
+  ignoreFiles: ['node_modules/**/*', 'dist/**/*'],
 };
