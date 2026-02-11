@@ -109,7 +109,7 @@
 
         // Call FastAPI
         try {
-          const res = await fetch('http://api.alexanderlindholm.net:8000/chat', {
+          const res = await fetch('https://api.alexanderlindholm.net/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: text })
