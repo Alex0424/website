@@ -122,3 +122,9 @@ Check git tags
 ```
 git tag
 ```
+
+DEV:
+
+```sh
+npx live-server
+```
