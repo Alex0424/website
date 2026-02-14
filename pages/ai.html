@@ -107,12 +107,22 @@
         userMsg.textContent = text;
         chat.appendChild(userMsg);
 
+        let sessionId = localStorage.getItem("session_id");
+
+        if (!sessionId) {
+          sessionId = crypto.randomUUID();
+          localStorage.setItem("session_id", sessionId);
+        }
+
         // Call FastAPI
         try {
           const res = await fetch('https://api.alexanderlindholm.net/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: text })
+            body: JSON.stringify({
+              message: text,
+              session_id: sessionId
+            })
           });
           const data = await res.json();
 
