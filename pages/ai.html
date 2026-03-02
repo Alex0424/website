@@ -49,7 +49,7 @@
         text-align: right;
       }
       .ai {
-        background: #32CD32;
+        background: #32cd32;
         text-align: left;
       }
       #input {
@@ -107,11 +107,11 @@
         userMsg.textContent = text;
         chat.appendChild(userMsg);
 
-        let sessionId = localStorage.getItem("session_id");
+        let sessionId = localStorage.getItem('session_id');
 
         if (!sessionId) {
           sessionId = crypto.randomUUID();
-          localStorage.setItem("session_id", sessionId);
+          localStorage.setItem('session_id', sessionId);
         }
 
         // Call FastAPI
@@ -121,8 +121,8 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               message: text,
-              session_id: sessionId
-            })
+              session_id: sessionId,
+            }),
           });
           const data = await res.json();
 
@@ -145,4 +145,3 @@
     <script src="/assets/js/navigation.js"></script>
   </body>
 </html>
-
