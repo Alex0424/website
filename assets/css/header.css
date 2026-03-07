@@ -5,6 +5,7 @@
 }
 
 nav {
+  font-family: 'Anek Devanagari', sans-serif;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -14,7 +15,7 @@ nav {
   color: white;
 }
 
-.logo {
+nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -50,11 +51,11 @@ nav {
 }
 
 @media (width <= 768px) {
-  .hamburger {
+  nav .hamburger {
     display: flex;
   }
 
-  .menu {
+  nav .menu {
     position: fixed;
     top: 70px;
     left: -100%;
@@ -69,20 +70,20 @@ nav {
     z-index: 1001;
   }
 
-  .menu.active {
+  nav .menu.active {
     left: 0;
     z-index: 1001;
   }
 
-  .hamburger.active span:nth-child(1) {
+  nav .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
-  .hamburger.active span:nth-child(2) {
+  nav .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
 
-  .hamburger.active span:nth-child(3) {
+  nav .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
 }

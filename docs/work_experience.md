@@ -4,8 +4,8 @@
 
 ## **Company**: [Dynamist AB](https://dynamist.se/)
 
-Role: DevOps Engineer (Ongoing Internship / LIA)  
-Duration: 9 months (currently in progress)
+Role: DevOps Engineer (Internship / LIA)  
+Duration: 10 months
 
 <div style="page-break-after: always;"></div>
 
