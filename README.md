@@ -1,28 +1,63 @@
-# This is the Source Code for [my Portfolio Website](https://alexanderlindholm.net)
+# Portfolio Website
 
-## License
+This repository contains the source code for my personal portfolio website, built as a static site using HTML templates, with Python used to generate graphical assets and separate tools for automated frontend linting.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Live Website
 
-## Website Preview
+[www.alexanderlindholm.net](https://alexanderlindholm.net)
 
-```sh
-npx live-server
-```
+## Preview
+
+### Desktop
+
+![Index page preview](./assets/images/preview_index_page.png)
+![AI page preview](./assets/images/preview_ai_page.png)
+
+### Mobile
+
+![Mobile Preview A](./assets/images/preview_mobile_a.png)
+![Mobile Preview B](./assets/images/preview_mobile_b.png)
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- Node.js (development tooling)
+- GitHub Pages
+
+## Features
+
+- Static portfolio website hosted on GitHub Pages
+- Modular HTML templates for reusable page layouts
+- Markdown-based content system for managing website text
+- Python scripts for automated graph generation
+- Automated code linting for HTML, CSS, and JavaScript
+- Pre-commit hooks to enforce code quality
+- GitHub Actions workflow for website health monitoring
 
 ## File Structure
 
-| Folder       | Purpose            |
-| ------------ | ------------------ |
-| `content/`   | website text       |
-| `templates/` | HTML structure     |
-| `pages/`     | final pages        |
-| `assets/`    | static files       |
-| `scripts/`   | generation tooling |
+| Folder       | Purpose                         |
+| ------------ | ------------------------------- |
+| `content/`   | website text                    |
+| `templates/` | HTML structure                  |
+| `pages/`     | final pages                     |
+| `assets/`    | static files                    |
+| `scripts/`   | graph generation and automation |
 
-## Frontend Development Setup
+## Local Development
 
-Install all frontend tools with a single command:
+### Requirements
+
+- Node.js
+- Python 3.11+
+- uv
+
+### Install Dependencies
+
+Install all frontend development tools with a single command:
 
 ```sh
 npm install
@@ -30,12 +65,12 @@ npm install
 
 This will install all dependencies defined in package.json, including:
 
-- ESLint - For JavaScript linting
 - Prettier - For code formatting
+- ESLint - For JavaScript linting
 - Stylelint - For CSS linting
 - HTMLHint - For HTML validation
 
-### 🧪 Running Linters
+### 🧪 Test Code
 
 ```sh
 # Format code with Prettier
@@ -54,87 +89,59 @@ npm run lint:html
 npm run lint
 ```
 
-## Activate VENV
+### Start the preview server
 
-[Activate VENV](https://docs.astral.sh/uv/pip/environments/)
+Run a local development server to preview the website:
+
+```sh
+npx live-server
+```
+
+### Python Usage
+
+#### Install Dependencies
+
+[Activate VENV:](https://docs.astral.sh/uv/pip/environments/)
 
 ```sh
 uv venv
 source .venv/bin/activate
 ```
 
-## Running Python Code
-
 ```sh
-uv pip install .[grafs]
-```
-
-```sh
-python <name>.py
-```
-
-## Linting Python Code
-
-```sh
+uv pip install .[graphs]
+uv pip install .[dev]
 uv pip install .[linting]
 ```
 
+#### Run Python Code
+
+Example:
+
 ```sh
-flake8 src/
+python ./scripts/generation/spider_skills.py
 ```
 
-## Pre-Commit Setup
+#### Linting Python Code
 
-Update the version (rev) of the repositories specified in `.pre-commit-config.yaml` file.
+```sh
+flake8 scripts/
+```
 
-Fetches the latest versions directly from the repositories listed under the repos section.
+### Pre-Commit Setup
+
+Fetch the latest hook versions from the repositories listed in `.pre-commit-config.yaml`.
 
 ```sh
 pre-commit autoupdate
 ```
 
-Install the updated hooks into your Git repository.
-
-Running pre-commit install ensures that the hooks are actually installed into your Git repository's `hooks` directory.
+Install the hooks in your local Git repository:
 
 ```sh
 pre-commit install
 ```
 
-## Git Tag
+## License
 
-Pull the latest changes
-
-```sh
-git pull origin main
-```
-
-Create a new tag pointing to the latest commit
-
-```sh
-git tag -a v0.1.5 -m "Version 0.1.5"
-```
-
-Push the tag
-
-```sh
-git push origin v0.1.5
-```
-
-Delete tag from local repository
-
-```sh
-git tag -d v0.1.5
-```
-
-Delete the tag remotely
-
-```sh
-git push origin --delete v0.1.5
-```
-
-Check git tags
-
-```sh
-git tag
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

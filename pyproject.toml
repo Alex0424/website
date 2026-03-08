@@ -1,15 +1,18 @@
 [project]
-name = "grafs_generator"
+name = "graphs_generator"
 version = "0.1.0"
-description = "Generating grafs for my webpage with python."
+description = "Generating graphs for my webpage with python."
 authors = [
     { name = "Alexander Lindholm", email = "lindholmalexander.la@gmail.com" }
 ]
 license = "MIT"
 readme = "README.md"
 
+[tool.setuptools.packages.find]
+where = ["scripts"]
+
 [project.optional-dependencies]
-grafs = [
+graphs = [
     'pandas',
     'plotly',
 ]
@@ -25,4 +28,5 @@ dev = [
     "pytest",
     "black",
     "isort",
+    "kaleido",
 ]

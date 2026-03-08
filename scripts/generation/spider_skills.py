@@ -42,9 +42,7 @@ fig.update_layout(
 base_dir = Path(__file__).resolve().parent.parent  # Root DIR
 
 # Save PNG
-output_path = base_dir / "assets/images/spider_chart.png"
+output_path = base_dir / "../assets/images/spider_chart.png"
 fig.write_image(output_path, format="png", scale=2)
 
-# # Save HTML
-# output_path = base_dir / "pages/spider_chart.html"
-# fig.write_html(output_path)
+print("Done.")
