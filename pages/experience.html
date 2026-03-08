@@ -41,7 +41,7 @@
     </section>
 
     <script>
-      fetch('/docs/work_experience.md')
+      fetch('/content/work_experience.md')
         .then((response) => response.text())
         .then((markdown) => {
           document.getElementById('content').innerHTML = marked.parse(markdown);
