@@ -39,13 +39,14 @@ This repository contains the source code for my personal portfolio website, buil
 
 ## File Structure
 
-| Folder       | Purpose                         |
-| ------------ | ------------------------------- |
-| `content/`   | website text                    |
-| `templates/` | HTML structure                  |
-| `pages/`     | final pages                     |
-| `assets/`    | static files                    |
-| `scripts/`   | graph generation and automation |
+| Folder              | Purpose                         |
+| ------------------- | ------------------------------- |
+| `content/`          | website text                    |
+| `templates/`        | HTML structure                  |
+| `pages/`            | final pages                     |
+| `assets/`           | static files                    |
+| `scripts/`          | graph generation and automation |
+| `.github/workflows` | CI/CD pipelines                 |
 
 ## Local Development
 
