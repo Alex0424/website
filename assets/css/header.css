@@ -90,18 +90,81 @@ nav .logo {
   text-shadow: 0 0 12px rgb(255 255 255 / 45%);
 }
 
-.hamburger {
+/* Menu toggle: glowing ring with three bars that morph into an X */
+.menu-toggle {
   display: none;
-  flex-direction: column;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 8%);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  margin: 3px 0;
-  transition: 0.3s;
+.menu-toggle:hover,
+.menu-toggle[aria-expanded='true'] {
+  background: rgb(255 255 255 / 16%);
+  border-color: rgb(255 255 255 / 70%);
+  box-shadow: 0 0 14px 2px rgb(95 180 255 / 60%);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.menu-toggle__bar {
+  position: absolute;
+  left: 10px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 6px rgb(255 255 255 / 70%);
+  transition:
+    transform 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.2s ease,
+    width 0.35s ease;
+}
+
+.menu-toggle__bar:nth-child(1) {
+  top: 14px;
+  width: 22px;
+}
+
+.menu-toggle__bar:nth-child(2) {
+  top: 21px;
+  width: 14px;
+}
+
+.menu-toggle__bar:nth-child(3) {
+  top: 28px;
+  width: 18px;
+}
+
+.menu-toggle:hover .menu-toggle__bar {
+  width: 22px;
+}
+
+.menu-toggle[aria-expanded='true'] .menu-toggle__bar:nth-child(1) {
+  width: 22px;
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded='true'] .menu-toggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(8px);
+}
+
+.menu-toggle[aria-expanded='true'] .menu-toggle__bar:nth-child(3) {
+  width: 22px;
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .menu {
@@ -140,14 +203,13 @@ nav .logo {
   transform: scaleX(1);
 }
 
-/* Mobile: hamburger toggles a dropdown under the nav */
+/* Mobile: toggle reveals a dropdown panel under the nav */
 @media (width <= 768px) {
-  .hamburger {
-    display: flex;
+  .menu-toggle {
+    display: block;
   }
 
   .menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -155,24 +217,76 @@ nav .logo {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    padding: 1.5rem 0;
-    background: linear-gradient(180deg, #0a2f7a, #0b1a3d);
-    box-shadow: 0 12px 24px rgb(0 0 0 / 50%);
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .hamburger.active span:nth-child(2) {
+    padding: 1.75rem 0 2rem;
+    background: linear-gradient(
+      180deg,
+      rgb(10 47 122 / 92%),
+      rgb(11 26 61 / 96%)
+    );
+    backdrop-filter: blur(10px);
+    box-shadow: 0 16px 32px rgb(0 0 0 / 50%);
     opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0s linear 0.3s;
   }
 
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+  .menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .menu a {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Links drop in one after another */
+  .menu li {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .menu.open li {
+    opacity: 1;
+    transform: none;
+  }
+
+  .menu.open li:nth-child(2) {
+    transition-delay: 40ms;
+  }
+
+  .menu.open li:nth-child(3) {
+    transition-delay: 80ms;
+  }
+
+  .menu.open li:nth-child(4) {
+    transition-delay: 120ms;
+  }
+
+  .menu.open li:nth-child(5) {
+    transition-delay: 160ms;
+  }
+
+  .menu.open li:nth-child(6) {
+    transition-delay: 200ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle__bar,
+  .menu,
+  .menu li {
+    transition: none;
   }
 }

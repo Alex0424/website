@@ -9,10 +9,10 @@ fetch('/templates/nav.html')
   .catch((error) => console.error('Error loading nav:', error));
 
 function initializeNavigation() {
-  const hamburger = document.getElementById('hamburger');
+  const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
-  if (!hamburger || !menu) {
+  if (!toggle || !menu) {
     console.error('Navigation elements not found');
     return;
   }
@@ -25,21 +25,24 @@ function initializeNavigation() {
     }
   }
 
-  const closeMenu = () => {
-    hamburger.classList.remove('active');
-    menu.classList.remove('active');
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    menu.classList.toggle('active');
+  toggle.addEventListener('click', () => {
+    setOpen(!menu.classList.contains('open'));
   });
 
-  // Close when a link or anything outside the nav is clicked
+  // Close when a link, anything outside the nav, or Escape is used
   menu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') closeMenu();
+    if (e.target.tagName === 'A') setOpen(false);
   });
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav')) closeMenu();
+    if (!e.target.closest('nav')) setOpen(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
   });
 }
