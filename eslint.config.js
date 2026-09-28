@@ -1,6 +1,6 @@
 export default [
   {
-    ignores: ['node_modules/**', 'dist/**'],
+    ignores: ['node_modules/**', 'dist/**', '.venv/**'],
   },
   {
     files: ['**/*.js'],

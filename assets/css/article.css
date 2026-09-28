@@ -1,5 +1,17 @@
 body {
-  background-color: #0d1117;
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgb(19 121 255 / 18%) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 85% 90%,
+      rgb(120 60 255 / 14%) 0%,
+      transparent 50%
+    ),
+    #000;
+  background-attachment: fixed;
 }
 
 section body {
@@ -18,10 +30,29 @@ section #content {
   font-family: Georgia, serif;
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1rem 2.5rem 2rem;
   line-height: 1.7;
-  background-color: #0d1117;
+  background-color: rgb(1 14 49 / 85%);
+  border: 1px solid #3e444b;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgb(19 121 255 / 15%);
   color: #e6edf3;
+}
+
+section #content a {
+  color: #6fb1ff;
+}
+
+section #content hr {
+  border: none;
+  border-top: 1px solid #2d3748;
+}
+
+@media (width <= 600px) {
+  section #content {
+    margin: 1rem;
+    padding: 0.5rem 1.25rem 1.5rem;
+  }
 }
 
 section h1,

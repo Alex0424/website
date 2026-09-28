@@ -1,0 +1,42 @@
+body {
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgb(19 121 255 / 18%) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 85% 90%,
+      rgb(120 60 255 / 14%) 0%,
+      transparent 50%
+    ),
+    #000;
+  background-attachment: fixed;
+}
+
+.container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a.main_button {
+  background-color: rgb(1 14 49);
+  border-color: #3e444b;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+a.main_button:hover,
+a.main_button:focus-visible {
+  background-color: rgb(1 14 49);
+  transform: translateY(-6px);
+  border-color: #1379ff;
+  box-shadow:
+    0 0 20px rgb(19 121 255 / 45%),
+    0 10px 30px rgb(0 0 0 / 60%);
+}

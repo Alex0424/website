@@ -1,5 +1,17 @@
 body {
-  background-color: #000;
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgb(19 121 255 / 18%) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 85% 90%,
+      rgb(120 60 255 / 14%) 0%,
+      transparent 50%
+    ),
+    #000;
+  background-attachment: fixed;
   color: #f0f6fc;
   font-family: 'Anek Devanagari', sans-serif;
   margin: 0;
@@ -18,11 +30,11 @@ a {
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 250px); /* Fixed width columns */
-  gap: 60px; /* Your existing gap */
+  display: flex;
+  flex-wrap: wrap; /* Centers a short last row */
+  gap: 28px 40px;
   padding: 20px;
-  justify-content: center; /* Center the grid when there's extra space */
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -37,12 +49,17 @@ a {
   box-sizing: border-box; /* Add this line */
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgb(0 0 0 / 50%);
+.skill-card:hover,
+.skill-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: #1379ff;
+  box-shadow:
+    0 0 20px rgb(19 121 255 / 45%),
+    0 10px 30px rgb(0 0 0 / 60%);
 }
 
 .skill-icon {
@@ -66,8 +83,7 @@ a {
 /* media query for small screens */
 @media (width <= 480px) {
   .skills-grid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 30px; /* Reduced gap */
+    gap: 20px;
   }
 
   .skill-card {
@@ -78,9 +94,7 @@ a {
 
 @media (width >= 481px) and (width <= 768px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 40px;
-    justify-items: center; /* Center items horizontally in their grid areas */
+    gap: 24px;
   }
 
   .skill-card {

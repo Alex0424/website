@@ -13,6 +13,48 @@ nav {
   padding: 1rem;
   background: #1379ff;
   color: white;
+  position: relative;
+}
+
+/* Glowing divider between nav and page body */
+nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #5fb4ff 20%,
+    #fff 50%,
+    #5fb4ff 80%,
+    transparent
+  );
+  background-size: 200% 100%;
+  box-shadow:
+    0 0 8px 1px rgb(19 121 255 / 90%),
+    0 0 24px 4px rgb(19 121 255 / 50%),
+    0 0 48px 10px rgb(19 121 255 / 25%);
+  animation: nav-glow-sweep 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes nav-glow-sweep {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav::after {
+    animation: none;
+  }
 }
 
 nav .logo {

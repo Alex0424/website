@@ -22,8 +22,39 @@ body {
   padding: 30px 20px 10px;
   text-align: center;
   font-size: 14px;
-  border-top: 1px solid #262b31;
   margin-top: auto;
+  position: relative;
+}
+
+/* Glowing divider between page body and footer (keyframes in header.css) */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -2px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #5fb4ff 20%,
+    #fff 50%,
+    #5fb4ff 80%,
+    transparent
+  );
+  background-size: 200% 100%;
+  box-shadow:
+    0 0 8px 1px rgb(19 121 255 / 90%),
+    0 0 24px 4px rgb(19 121 255 / 50%),
+    0 0 48px 10px rgb(19 121 255 / 25%);
+  animation: nav-glow-sweep 6s linear infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer::before {
+    animation: none;
+  }
 }
 
 .footer-content a {

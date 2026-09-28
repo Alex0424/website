@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Alexander Lindholm - DevOps Engineer Portfolio"
+      content="Alexander Lindholm - DevOps &amp; Cloud Engineer Portfolio"
     />
     <meta property="og:image" content="/assets/images/spider_chart.png" />
 
@@ -23,29 +23,27 @@
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
   </head>
-  <body>
+  <body class="home">
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
     <script src="/assets/js/nav_placeholder.js"></script>
     <div id="nav-placeholder"></div>
 
     <div class="heading-group">
       <h1 style="padding-top: 20px">Alexander Lindholm</h1>
-      <p class="subtitle">DevOps Engineer</p>
+      <p class="subtitle">DevOps &amp; Cloud Engineer</p>
     </div>
 
     <div class="skills-section">
       <h2></h2>
-      <div class="responsive-image-container">
-        <img
-          src="/assets/images/spider_chart.png"
-          alt="Skills Spider Chart"
-          class="responsive-image"
-        />
-      </div>
+      <div id="skill-chart" class="skill-chart"></div>
     </div>
 
     <footer id="footer-placeholder"></footer>
 
     <script src="/assets/js/footer_placeholder.js"></script>
+    <script src="/assets/js/home_background.js"></script>
+    <script src="/assets/js/skill_chart.js"></script>
   </body>
 </html>

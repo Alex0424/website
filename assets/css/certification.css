@@ -1,5 +1,17 @@
 body {
-  background-color: #000;
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgb(19 121 255 / 18%) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 85% 90%,
+      rgb(120 60 255 / 14%) 0%,
+      transparent 50%
+    ),
+    #000;
+  background-attachment: fixed;
   color: #f0f6fc;
   font-family: 'Anek Devanagari', sans-serif;
   margin: 0;
@@ -15,7 +27,7 @@ h1 {
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr; /* One box per line */
-  gap: 50px;
+  gap: 28px;
   padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -23,14 +35,15 @@ h1 {
 }
 
 .skill-card {
-  background-color: #151b23;
+  background-color: rgb(1 14 49);
   border: 1px solid #3e444b;
   border-radius: 8px;
   padding: 15px;
   text-align: center;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,9 +51,13 @@ h1 {
   box-sizing: border-box;
 }
 
-.skill-card:hover {
-  transform: scale(1.02); /* Slightly reduced scale for better UX */
-  box-shadow: 0 4px 15px rgb(0 0 0 / 50%);
+.skill-card:hover,
+.skill-card-link:focus-visible .skill-card {
+  transform: translateY(-6px);
+  border-color: #1379ff;
+  box-shadow:
+    0 0 20px rgb(19 121 255 / 45%),
+    0 10px 30px rgb(0 0 0 / 60%);
 }
 
 .skill-icon {
@@ -114,7 +131,7 @@ a {
 
 @media (width <= 480px) {
   .skills-grid {
-    gap: 30px;
+    gap: 20px;
     padding: 15px;
   }
 
