@@ -32,11 +32,77 @@ body.home h1 {
   filter: drop-shadow(0 0 20px rgb(19 121 255 / 40%));
 }
 
-/* Skill radar chart */
+/* Skill "crypto ticker" chart */
 .skill-chart {
   position: relative;
-  width: min(680px, calc(100% - 32px));
+  width: min(760px, calc(100% - 32px));
   margin: 20px auto 40px;
+  padding: 16px 16px 8px;
+  border: 1px solid #1f2733;
+  border-radius: 12px;
+  background: rgb(13 17 23 / 70%);
+}
+
+.skill-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-ticker-symbol {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f0f6fc;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.skill-ticker-symbol small {
+  color: #8b949e;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+/* Blue coin icon in the site colors, Bitcoin-logo style */
+.skill-coin {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6fb1ff, #1379ff 55%, #0a2f7a);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgb(19 121 255 / 60%);
+}
+
+/* "A" with two strokes through it, like a $ sign */
+.skill-coin svg {
+  width: 65%;
+  height: 65%;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skill-ticker-price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.skill-ticker-change {
+  color: #16c784;
+  font-weight: 600;
+}
+
+.skill-plot {
+  position: relative;
 }
 
 .skill-chart-svg {
@@ -47,28 +113,44 @@ body.home h1 {
 }
 
 .skill-grid {
-  fill: none;
-  stroke: #2d3748;
+  stroke: #1f2733;
   stroke-width: 1;
 }
 
-.skill-shape {
-  transform-origin: 50% 50%;
-  transform-box: view-box;
-  animation: skill-grow 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+.skill-axis {
+  fill: #8b949e;
+  font-size: 13px;
+}
+
+.skill-label {
+  fill: #f0f6fc;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.skill-line {
+  fill: none;
+  stroke: #16c784;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  filter: drop-shadow(0 0 8px rgb(22 199 132 / 60%));
+  animation: skill-draw 1.6s ease-out both;
 }
 
 .skill-area {
-  fill: rgb(19 121 255 / 25%);
-  stroke: #1379ff;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  filter: drop-shadow(0 0 12px rgb(19 121 255 / 50%));
+  animation: skill-fade 1.6s ease-out both;
+}
+
+.skill-crosshair {
+  stroke: #8b949e;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
 }
 
 .skill-dot {
-  fill: #1379ff;
-  stroke: #000;
+  fill: #16c784;
+  stroke: #0d1117;
   stroke-width: 2;
   transform-box: fill-box;
   transform-origin: center;
@@ -79,21 +161,20 @@ body.home h1 {
   transform: scale(1.6);
 }
 
+/* Latest "price" pulses like a live ticker */
+.skill-dot-live {
+  animation: skill-live 1.8s ease-in-out infinite;
+}
+
 .skill-hit {
   fill: transparent;
-  cursor: pointer;
+  cursor: crosshair;
   outline: none;
 }
 
 .skill-hit:focus-visible {
-  stroke: #6fb1ff;
-  stroke-width: 2;
-}
-
-.skill-label {
-  fill: #f0f6fc;
-  font-size: 17px;
-  font-weight: 500;
+  stroke: #16c784;
+  stroke-width: 1;
 }
 
 .skill-tooltip {
@@ -118,15 +199,33 @@ body.home h1 {
   white-space: nowrap;
 }
 
-@keyframes skill-grow {
+@keyframes skill-draw {
   from {
-    transform: scale(0);
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes skill-fade {
+  from {
     opacity: 0;
   }
 }
 
+@keyframes skill-live {
+  50% {
+    filter: drop-shadow(0 0 8px #16c784);
+    transform: scale(1.3);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .skill-shape {
+  .skill-line,
+  .skill-area,
+  .skill-dot-live {
     animation: none;
   }
 }

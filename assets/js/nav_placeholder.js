@@ -17,34 +17,29 @@ function initializeNavigation() {
     return;
   }
 
+  // Highlight the link for the current page
+  const path = window.location.pathname.replace(/index\.html$/, '');
+  for (const link of menu.querySelectorAll('a')) {
+    if (link.getAttribute('href') === path) {
+      link.setAttribute('aria-current', 'page');
+    }
+  }
+
+  const closeMenu = () => {
+    hamburger.classList.remove('active');
+    menu.classList.remove('active');
+  };
+
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     menu.classList.toggle('active');
-
-    // Toggle body scroll prevention
-    if (menu.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
   });
 
-  // Close menu when clicking on links
+  // Close when a link or anything outside the nav is clicked
   menu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-      hamburger.classList.remove('active');
-      menu.classList.remove('active');
-      // Restore body scroll
-      document.body.style.overflow = '';
-    }
+    if (e.target.tagName === 'A') closeMenu();
   });
-
-  // Close menu when clicking outside (optional)
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav') && menu.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      menu.classList.remove('active');
-      document.body.style.overflow = '';
-    }
+    if (!e.target.closest('nav')) closeMenu();
   });
 }

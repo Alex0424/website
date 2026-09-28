@@ -10,10 +10,35 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #1379ff;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    115deg,
+    #0a2f7a,
+    #1379ff 45%,
+    #3d5cff 75%,
+    #0a2f7a
+  );
+  background-size: 300% 100%;
+  animation: nav-bg-shift 18s ease-in-out infinite alternate;
   color: white;
   position: relative;
+}
+
+/* Keep the nav visible while scrolling */
+#nav-placeholder {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@keyframes nav-bg-shift {
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
 }
 
 /* Glowing divider between nav and page body */
@@ -52,14 +77,17 @@ nav::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  nav,
   nav::after {
     animation: none;
   }
 }
 
 nav .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 12px rgb(255 255 255 / 45%);
 }
 
 .hamburger {
@@ -83,49 +111,68 @@ nav .logo {
 }
 
 .menu a {
+  position: relative;
   color: white;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.menu a:hover {
-  color: #ddd;
+/* Glowing underline that grows on hover / marks the current page */
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0 0 8px 1px rgb(255 255 255 / 80%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
+.menu a:hover {
+  text-shadow: 0 0 10px rgb(255 255 255 / 80%);
+}
+
+.menu a:hover::after,
+.menu a[aria-current='page']::after {
+  transform: scaleX(1);
+}
+
+/* Mobile: hamburger toggles a dropdown under the nav */
 @media (width <= 768px) {
-  nav .hamburger {
+  .hamburger {
     display: flex;
   }
 
-  nav .menu {
-    position: fixed;
-    top: 70px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: #1379ff;
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 2rem;
-    transition: 0.3s;
-    z-index: 1001;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    background: linear-gradient(180deg, #0a2f7a, #0b1a3d);
+    box-shadow: 0 12px 24px rgb(0 0 0 / 50%);
   }
 
-  nav .menu.active {
-    left: 0;
-    z-index: 1001;
+  .menu.active {
+    display: flex;
   }
 
-  nav .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
   }
 
-  nav .hamburger.active span:nth-child(2) {
+  .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
 
-  nav .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }

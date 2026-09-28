@@ -32,28 +32,71 @@
         padding: 40px 16px 10px;
       }
       .status-badge {
+        position: relative;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         margin-top: 12px;
-        padding: 6px 14px;
+        padding: 6px 16px;
+        overflow: hidden;
         border-radius: 999px;
-        border: 1px solid rgb(255 90 90 / 40%);
-        background: rgb(255 90 90 / 10%);
+        border: 1px solid rgb(255 90 90 / 35%);
+        background: rgb(20 8 10 / 80%);
         color: #ffb4b4;
-        font-size: 0.9rem;
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        box-shadow: 0 0 18px rgb(255 90 90 / 15%);
       }
+      /* Light beam that sweeps across the badge */
+      .status-badge::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          100deg,
+          transparent 30%,
+          rgb(255 180 180 / 25%) 50%,
+          transparent 70%
+        );
+        transform: translateX(-100%);
+        animation: status-sweep 3.5s ease-in-out infinite;
+      }
+      /* Solid dot with a sonar ring instead of blinking */
       .status-dot {
+        position: relative;
         width: 8px;
         height: 8px;
         border-radius: 50%;
         background: #ff5a5a;
         box-shadow: 0 0 8px #ff5a5a;
-        animation: pulse 1.6s ease-in-out infinite;
       }
-      @keyframes pulse {
-        50% {
-          opacity: 0.3;
+      .status-dot::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid #ff5a5a;
+        animation: status-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      @keyframes status-ping {
+        to {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
+      @keyframes status-sweep {
+        60%,
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .status-badge::after,
+        .status-dot::after {
+          animation: none;
+          display: none;
         }
       }
       .chat-container {
